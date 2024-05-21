@@ -1,0 +1,14 @@
+.gradle/
+.idea/
+build/classes
+build/compileSync
+build/js
+build/kotlin
+build/kotlinProjectStructureMetadata
+build/kotlin
+build/libs
+build/processedResources
+build/reports
+build/snapshot
+build/test-results
+build/tmp

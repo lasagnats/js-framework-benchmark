@@ -81,13 +81,17 @@ var nouns = []string{"table", "chair", "house", "bbq", "desk", "car", "pony", "c
 
 func BuildData(count int, c *Root) []Data  {
     data := make([]Data, count)
+    startId := c.CurrentID
+
     for i := 0; i < count; i++ {
 		data[i] = Data{
-			ID:    c.CurrentID,
+			ID:    startId + i,
 			Label: fmt.Sprintf("%s %s %s", adjectives[rand.IntN(len(adjectives))], colours[rand.IntN(len(colours))], nouns[rand.IntN(len(nouns))]),
 		}
-        c.CurrentID = c.CurrentID + 1
 	}
+
+    c.CurrentID = c.CurrentID + count
+
     return data
 }
 

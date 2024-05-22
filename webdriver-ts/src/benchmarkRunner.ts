@@ -93,7 +93,7 @@ async function runBenchmakLoopStartup(
     let res = await forkAndCallBenchmark(framework, benchmarkInfo, benchmarkOptions);
     if (Array.isArray(res.result)) {
       results = results.concat(res.result as StartupBenchmarkResult[]);
-    } 
+    }
     else {
       results.push(res.result);
     }
